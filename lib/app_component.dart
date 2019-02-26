@@ -1,4 +1,5 @@
 import 'package:angular/angular.dart';
+import 'src/hero_form_component.dart';
 
 
 // AngularDart info: https://webdev.dartlang.org/angular
@@ -7,8 +8,8 @@ import 'package:angular/angular.dart';
 @Component(
   selector: 'my-app',
   styleUrls: ['app_component.css'],
-  templateUrl: 'app_component.html',
-  directives: [coreDirectives],
+  template: '<hero-form></hero-form>',
+  directives: [HeroFormComponent],
 )
 class AppComponent {
   // Nothing here yet. All logic is in TodoListComponent.
