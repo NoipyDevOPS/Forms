@@ -10,8 +10,8 @@ const List<String> _powers = [
 ];
 
 @Component(
-  selector: 'hero-form',
-  templateUrl: 'hero_form_component.html',
+  selector: 'my-app',
+  template: '<hero-form></hero-form>',
   directives: [coreDirectives, formDirectives],
 )
 

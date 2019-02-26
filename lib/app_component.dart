@@ -7,7 +7,6 @@ import 'src/hero_form_component.dart';
 
 @Component(
   selector: 'my-app',
-  styleUrls: ['app_component.css'],
   template: '<hero-form></hero-form>',
   directives: [HeroFormComponent],
 )
