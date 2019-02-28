@@ -24,4 +24,9 @@ class HeroFormComponent{
   void onSubmit(){
     submitted = true;
   }
+
+  Map<String, bool> setCssValidityClass(NgControl control){
+    final validityClass = control.valid == true ? 'is-valid' : 'is-invalid';
+    return {validityClass: true};
+  }
 }

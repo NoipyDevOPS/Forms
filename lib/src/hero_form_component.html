@@ -2,10 +2,17 @@
     <h1>Hero Form</h1>
     <form>
         <div class="form-group">
+            <mark>{{model}}</mark><hr>
             <label for="name">Name&nbsp;*</label>
             <input type="text" class="form-control" id="name" required
-                [(ngModel)]="model.name" ngControl="name">
+                [(ngModel)]="model.name" 
+                #name="ngForm"
+                #spy
+                [class.is-valid]="name.valid"
+                [class.is-invalid]="name.invalid"
+                ngControl="name">
         </div>
+        {{spy.className}}
 
         <div class="form-group">
             <label for="alterEgo">Alter Ego</label>
@@ -16,7 +23,10 @@
         <div class="form-group">
             <label for="power">Hero Power&nbsp;*</label>
             <select class="form-control" id="power" required
-                [(ngModel)]="model.power" ngControl="power">
+                [(ngModel)]="model.power" 
+                #power="ngForm"
+                [ngClass]="setCssValidityClass(power)"
+                ngControl="power">
                 <option *ngFor="let p of powers" [value]="p">{{p}}</option>
             </select>
         </div>
