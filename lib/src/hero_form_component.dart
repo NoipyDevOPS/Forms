@@ -10,13 +10,13 @@ const List<String> _powers = [
 ];
 
 @Component(
-  selector: 'my-app',
-  template: '<hero-form></hero-form>',
+  selector: 'hero-form',
+  templateUrl: 'hero_form_component.html',
   directives: [coreDirectives, formDirectives],
 )
 
 class HeroFormComponent{
-  Hero model =Hero(18, 'Dr IQ', _powers[0], 'Chuck Overstreet');
+  Hero model = Hero(18, 'Dr IQ', _powers[0], 'Chuck Overstreet');
   bool submitted = false;
 
   List<String> get powers => _powers;
