@@ -11,6 +11,9 @@
                 [class.is-valid]="name.valid"
                 [class.is-invalid]="name.invalid"
                 ngControl="name">
+            <div [hidden]="name.valid || name.pristine" class="invalid-feedback">
+                Name is required
+            </div>
         </div>
         {{spy.className}}
 
