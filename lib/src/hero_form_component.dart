@@ -29,4 +29,10 @@ class HeroFormComponent{
     final validityClass = control.valid == true ? 'is-valid' : 'is-invalid';
     return {validityClass: true};
   }
+
+  void clear(){
+    model.name = '';
+    model.power = _powers[0];
+    model.alterEgo = '';
+  }
 }
